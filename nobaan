@@ -1,0 +1,3 @@
+<?php
+system('composer install');
+echo("__________________________________✔️  The operation was successful  ✔️__________________________________");
