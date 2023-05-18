@@ -2,7 +2,7 @@ app:
   debug: true
 
 database:
-  driver: pdo_mysql
+  driver: mysql
   host: mysql
   port: 3306
   username: root

@@ -19,16 +19,7 @@ class ConnectDb {
         // اتصال به MySQL
         $capsule = new Capsule;
 
-        $capsule->addConnection([
-            'driver'    =>    'mysql',
-            'host'      =>    'mysql',
-            'database'  =>    'nobaan',
-            'username'  =>    'root',
-            'password'  =>    12345678,
-            'charset'   =>    'UTF8',
-            'collation' =>    'utf8_unicode_ci',
-            'prefix'    =>    ''
-        ]);
+        $capsule->addConnection($databaseInfo);
         // Set the event dispatcher used by Eloquent models... (optional)
         $capsule->setEventDispatcher(new Dispatcher(new Container));
 
