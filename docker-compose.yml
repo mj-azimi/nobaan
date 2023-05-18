@@ -1,0 +1,37 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    networks:
+      - my_network
+    depends_on:
+      - redis
+      - mysql
+    volumes:
+      - ./:/var/www/html
+
+  redis:
+    image: redis:latest
+    networks:
+      - my_network
+
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678
+      - MYSQL_DATABASE=nobaan
+      - MYSQL_PASSWORD=1234
+      - MYSQL_USER=root
+
+    networks:
+      - my_network
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+networks:
+  my_network:
+    driver: bridge

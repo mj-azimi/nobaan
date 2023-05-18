@@ -1,0 +1,15 @@
+app:
+  debug: true
+
+database:
+  driver: pdo_mysql
+  host: mysql
+  port: 3306
+  username: root
+  password: 12345678
+  database: nobaan
+
+redis:
+  scheme: tcp
+  host: redis
+  port: 6379
