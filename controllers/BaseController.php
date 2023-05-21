@@ -14,5 +14,4 @@ class BaseController {
         $this->view->render($viewName, $data);
     }
 
-    // دیگر متدها و عملیات مورد نیاز برای کنترلر‌ها
 }

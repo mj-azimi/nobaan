@@ -13,7 +13,7 @@ if ($appConfig['debug']) {
     ini_set('display_errors', 'off');
 }
 
-ConnectDb::getInstance();
+ConnectDb::getInstance()->connectMysql();
 
 
 require __DIR__.'/../installer/install.php';

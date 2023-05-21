@@ -32,6 +32,13 @@ services:
     volumes:
       - ./mysql-data:/var/lib/mysql
 
+  memcache:
+    image: memcached:latest
+    networks:
+      - my_network
+    ports:
+      - "11211:11211"
+
 networks:
   my_network:
     driver: bridge

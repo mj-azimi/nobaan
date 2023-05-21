@@ -5,8 +5,15 @@ FROM php:8.1-apache
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip \
+    libmemcached-dev \
+    zlib1g-dev \
     && docker-php-ext-install zip \
-    && a2enmod rewrite
+    && a2enmod rewrite \
+    && pecl install memcached \
+    && docker-php-ext-enable memcached
+
+
+
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
 

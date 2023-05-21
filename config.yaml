@@ -1,6 +1,7 @@
 app:
   debug: true
-
+  dbCache: redis  # "redis" or "memcached"
+  expirationCach : 3600 #Second
 database:
   driver: mysql
   host: mysql
@@ -13,3 +14,4 @@ redis:
   scheme: tcp
   host: redis
   port: 6379
+
