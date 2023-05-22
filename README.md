@@ -1,4 +1,16 @@
 ###  پیاده سازی
-    https://www.digitalocean.com/community/tutorials/how-to-set-up-redis-as-a-cache-for-mysql-with-php-on-ubuntu-20-04
+در ابتدا به دلیل عدم آشنایی با ردیس و  memcache  اموزش دیده شد 
+
+در مرحله بعد زیر ساخت آماده شد 
 <hr>
-    https://stackoverflow.com/questions/34577755/store-mysql-query-in-redis-using-predis
+
+## توضیحات زیرساخت:
+یک نوع زیرساخت  mvc اماده شد داکر فایل و داکر کامپوز نوشته شد 
+در فایل کانفیگ اتصال به دیتابیس انجام شد
+در فولدر lib تنظیمات مربوط به کش نوشته شد
+برای جلو گیری از نو سازی کلاس از دیزاین پتر سینگلتون استفاده شد
+
+
+برای تنظیمات فایل config.yaml را ببینید
+
+با سپاس

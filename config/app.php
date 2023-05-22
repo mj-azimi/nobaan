@@ -5,6 +5,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\ErrorHandler\Debug;
 
 $configPath = __DIR__.'/../config.yaml';
+
 $appConfig = Yaml::parseFile($configPath)['app'];
 
 if ($appConfig['debug']) {

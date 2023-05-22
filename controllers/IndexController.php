@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Lib\Cache;
+use Model\Product;
 use Model\User;
 
 //use Model\User;
@@ -14,6 +15,7 @@ class IndexController extends BaseController
     public function index()
     {
 
-        return $this->render('first');
+        $product = Product::SelectAll();
+        return $this->render('first' ,['product'=>$product]);
     }
 }

@@ -1,7 +1,7 @@
 app:
   debug: true
   dbCache: redis  # "redis" or "memcached"
-  expirationCach : 3600 #Second
+  expirationCach : 5 #Second
 database:
   driver: mysql
   host: mysql
